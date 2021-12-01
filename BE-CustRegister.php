@@ -18,7 +18,7 @@
 
                     $sql="insert into customer values('$Name',$PhoneNo,'$Email','$Address','$ID')";
                     if(mysqli_query($dbcon,$sql)){
-                        echo "You Have Successfully Register";
+                        echo '<script>alert("You Have Successfully Register")</script>'; 
                     }
                     else
                     echo "Error...";
@@ -47,7 +47,7 @@
                         <td><input type="text" name="CustID">
                     </tr>
                 </table>
-                <button name="submit">Rregister</button>
+                <button name="submit">Register</button>
         </center>
     </body>
 </html>
