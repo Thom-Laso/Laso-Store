@@ -6,7 +6,7 @@
     <head>
         <title>Register</title>
     </head>
-    <body>
+    <body bgcolor="#18730b">
         <center>
             <?php
                 if(isset($_POST["submit"])){
