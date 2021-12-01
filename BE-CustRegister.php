@@ -27,27 +27,27 @@
             <form method="post">
                 <table>
                     <tr>
-                        <td>Name:</td>
-                        <td><input type="text" name="CustName">
+                        <td><h3>Name:</h3></td>
+                        <td><h3><input type="text" name="CustName"></h3></td>
                     </tr>
                     <tr>
-                        <td>Phone No:</td>
-                        <td><input type="numeric" name="CustPhoneNo">
+                        <td><h3>Phone No:</h3></td>
+                        <td><h3><input type="numeric" name="CustPhoneNo"></h3></td>
                     </tr>
                     <tr>
-                        <td>Email:</td>
-                        <td><input type="text" name="CustEmail">
+                        <td><h3>Email:</h3></td>
+                        <td><h3><input type="text" name="CustEmail"></h3></td>
                     </tr>
                     <tr>
-                        <td>Address:</td>
-                        <td><input type="text" name="CustAddress">
+                        <td><h3>Address:</h3></td>
+                        <td><h3><input type="text" name="CustAddress"></h3></td>
                     </tr>
                     <tr>
-                        <td>ID(Adhaar):</td>
-                        <td><input type="text" name="CustID">
+                        <td><h3>ID(Adhaar):</h3></td>
+                        <td><h3><input type="text" name="CustID"></h3></td>
                     </tr>
                 </table>
-                <button name="submit">Register</button>
+                <button name="submit"><h3>Register</h3></button>
         </center>
     </body>
 </html>
