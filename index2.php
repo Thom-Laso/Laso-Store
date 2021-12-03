@@ -19,7 +19,7 @@
                         <a href="#">Kitchen Electronics</a>
                     </div></li>
                 <li><a class="active" href="#home"style="position: relative;top:50px;right: 15px;">Home</a></li>
-                <li><input type="text" id="search" name="search"placeholder="Search Produtcs" style="position: relative;top:50px;right: 15px;">
+                <li><input type="search" id="search" name="search"placeholder="Search Produtcs" style="position: relative;top:50px;right: 15px;">
                 <li>
                     <div id='button-search'>
                         <input type="image" img src='magnifying-glass-40x40.png' style="position: relative;top:50px;right: 15px;">
@@ -34,33 +34,18 @@
         <a href="householdplastics.html">
             <img src="HomeImage/housejoldPlastic.png" id="inHouseP">
         </a>
-    <!--<div class="grid-item" style="background: rgb(250, 235, 103);">2</div>
-        <div class="grid-item" style="background: rgb(133, 253, 109);">3</div>
-        <div class="grid-item" style="background: rgb(137, 225, 247);">4</div>
-        <div class="grid-item" style="background: rgb(100, 98, 209);">5</div>
-        <div class="grid-item" style="background: rgb(250, 111, 204);">6</div>-->
     </div>
     
     <div class="indFPlastic"style="position: relative;top:150px; left:500px">
         <a href="default.asp">
             <img src="HomeImage/furnitureHome.png" id="inHouseF">
         </a>
-    <!--<div class="grid-item" style="background: rgb(250, 235, 103);">2</div>
-        <div class="grid-item" style="background: rgb(133, 253, 109);">3</div>
-        <div class="grid-item" style="background: rgb(137, 225, 247);">4</div>
-        <div class="grid-item" style="background: rgb(100, 98, 209);">5</div>
-        <div class="grid-item" style="background: rgb(250, 111, 204);">6</div>-->
     </div>
         
     <div class="indWrdbPlastic"style="position: relative;top:150px; left:500px">
         <a href="default.asp">
             <img src="HomeImage/wardrobe.png" id="inHouseWrdb">
         </a>
-    <!--<div class="grid-item" style="background: rgb(250, 235, 103);">2</div>
-        <div class="grid-item" style="background: rgb(133, 253, 109);">3</div>
-        <div class="grid-item" style="background: rgb(137, 225, 247);">4</div>
-        <div class="grid-item" style="background: rgb(100, 98, 209);">5</div>
-        <div class="grid-item" style="background: rgb(250, 111, 204);">6</div>-->
     </div>
     </body>
 </html>
@@ -73,4 +58,3 @@
                         echo '<a href="'.$homePageName.'">'.$homePageName.'</a>';
                     }
                     ?>
-<!--style = "position:relative; left:950px; top:20px;"-->
