@@ -47,7 +47,7 @@
                         <td><h3><input type="text" name="CustID"></h3></td>
                     </tr>
                 </table>
-                <button name="submit"><h3>Register</h3></button>
+                <button name="submit"><h3>Register</h3></a></button>
         </center>
     </body>
 </html>
