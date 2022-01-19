@@ -19,8 +19,8 @@
     
                 <a href="#" id="Idaccount"style="font-size:30px;position:relative; bottom:10px;">CreateAccount</a>
                 <a href="#" id="Idlogin" style="font-size:30px;position:relative; bottom:10px;">Login</a>
-                <span a href="#"><i class="fa fa-fw fa-user" style="font-size:45px;position:relative; bottom:8px;"></i></a></span>
-                <span a href="#"><i class="bi bi-bag-plus-fill"style="font-size:45px;position:relative; bottom:8px;"></i></a></span>
+                <span a href="#" i class="fa fa-fw fa-user" style="font-size:45px;position:relative; bottom:8px;"></i></a></span>
+                <span a href="#" i class="bi bi-bag-plus-fill"style="font-size:45px;position:relative; bottom:8px;"></i></a></span>
                 </form> 
             </ul>
         </div>
@@ -68,25 +68,26 @@
         <img src="LogoMakr.png" id="logo" style="position:relative; bottom: 660px; left:50px; height:60px; width:100px">   
     
 
+        <div class="HomeItems"style="position: relative;">
+            <div class="indHPlastic"style="position: relative; bottom:1px">
+                <a href="householdplastics.html">
+                    <img src="HomeImage/housejoldPlastic.png" id="inHouseP">
+                </a>
+            </div>
+            
+            <div class="indFPlastic"style="position: relative;bottom:465px; left:445px">
+                <a href="default.asp">
+                    <img src="HomeImage/furnitureHome.png" id="inHouseF">
+                </a>
+            </div>
 
-    <div class="indHPlastic"style="position: relative;top:150px; left:500px">
-        <a href="householdplastics.html">
-            <img src="HomeImage/housejoldPlastic.png" id="inHouseP">
-        </a>
-    </div>
+            <div class="indWrdbPlastic"style="position: relative;bottom:929px; left:900px">
+                <a href="default.asp">
+                    <img src="HomeImage/homeWardrobe.png" id="inHouseWrdb">
+                </a> 
+            </div>
+        </div>
     
-    <div class="indFPlastic"style="position: relative;top:150px; left:500px">
-        <a href="default.asp">
-            <img src="HomeImage/furnitureHome.png" id="inHouseF">
-        </a>
-    </div>
-
-    <div class="indWrdbPlastic"style="position: relative;top:150px; left:500px">
-        <a href="default.asp">
-            <img src="HomeImage/homeWardrobe.png" id="inHouseWrdb">
-        </a>
-        
-    </div>
     </body>
 </html>
 <?php
