@@ -1,33 +1,72 @@
 <!DOCTYPE html>
-<htnl>
+<html>
     <head>
         <title>index</title>
         <link rel="stylesheet" href="index2.css">
+        <script src="index2.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"><!--resposive for different size-->
+                     <!-- Load icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     </head>
     <body>
-
-		
+        <div class="navbar">
             <ul>
-            <li><img src="cart-59-48.png" href="#cart" id="cart"style="position: relative;top:50px; right: 10px;"></a></li>
-                <li><div class="dropdown"style="position: relative;top:50px;right: 15px;">
-                <button class="dropbtn">Products</button>
-                    <div class="dropdown-content">
-                        <a href="householdplastics.html">Household Products</a>
-                        <a href="#">Furniture Plastics</a>
-                        <a href="#">Fishing Tackle</a>
-                        <a href="#">Kitchen Electronics</a>
-                    </div></li>
-                <li><a class="active" href="#home"style="position: relative;top:50px;right: 15px;">Home</a></li>
-                <li><input type="search" id="search" name="search"placeholder="Search Produtcs" style="position: relative;top:50px;right: 15px;">
-                <li>
-                    <div id='button-search'>
-                        <input type="image" img src='magnifying-glass-40x40.png' style="position: relative;top:50px;right: 15px;">
-                    </div>
-                </li>
-                <img src="LogoMakr.png" id="logo">
+                <!-- The form -->
+                <form class="search" action="action_page.php" style="position: relative;top:10px;left: 400px;">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+    
+                <a href="#" id="Idaccount"style="font-size:30px;position:relative; bottom:10px;">CreateAccount</a>
+                <a href="#" id="Idlogin" style="font-size:30px;position:relative; bottom:10px;">Login</a>
+                <span a href="#"><i class="fa fa-fw fa-user" style="font-size:45px;position:relative; bottom:8px;"></i></a></span>
+                <span a href="#"><i class="bi bi-bag-plus-fill"style="font-size:45px;position:relative; bottom:8px;"></i></a></span>
+                </form> 
             </ul>
-  
+        </div>
+
+        <div class="SliderBody">
+            <div class="slider">
+                <div class="slides">
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
+                
+                    <!--Starting of slides-->
+                    <div class="slide first">
+                        <img src="Slides/slideBucket.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="Slides/slideWardrobe.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="Slides/slideRack.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="Slides/wardrobe.png" alt="">
+                    </div>
+                    <!--Ending of slides-->
+
+                    <!--Automatic navigation of slides-->
+                    <div class="navigation-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                        <div class="auto-btn4"></div>
+                    </div>
+                </div>
+                    <!--manual navigation of slides-->
+                    <div class="navigation-manual">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                        <label for="radio4" class="manual-btn"></label>
+                    </div>
+            </div>
+        </div>
+        <img src="LogoMakr.png" id="logo" style="position:relative; bottom: 660px; left:50px; height:60px; width:100px">   
+    
 
 
     <div class="indHPlastic"style="position: relative;top:150px; left:500px">
@@ -41,11 +80,12 @@
             <img src="HomeImage/furnitureHome.png" id="inHouseF">
         </a>
     </div>
-        
+
     <div class="indWrdbPlastic"style="position: relative;top:150px; left:500px">
         <a href="default.asp">
-            <img src="HomeImage/wardrobe.png" id="inHouseWrdb">
+            <img src="HomeImage/homeWardrobe.png" id="inHouseWrdb">
         </a>
+        
     </div>
     </body>
 </html>
