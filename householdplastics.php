@@ -2,48 +2,48 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Household Plastics</title>
-        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"> 
+        <title>Household Plastics</title> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--resposive for different size-->      
         <link rel="stylesheet" href="householdplastics.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     </head>
     
     <body>
-        <div class="hpcontent-wrapper">
-            <div class="nav-wrapper">
-                <div class="left-side">
-                    <div class="nav-link-wrapper active-nav-link">
-                        <a href="index2.html">Home</a>
-                      </div>
+        <div class="navbar">
+            <ul>
+                <!-- The form -->
+                <form class="search" action="action_page.php" style="position: relative;top:10px;left: 400px;">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
     
-                        <div class="nav-link-wrapper">
-                            <a href="about.html">About</a>
-                        </div>
-    
-                        <div class="nav-link-wrapper">
-                            <a href="https://www.instagram.com/lasostoreseiborlang/">Instagram</a>
-                        </div>
-                </div>
-    
-                <div class="rifgt-side">
-                    <div class="brand">
-                        <a href="#" id="cart"><img src="cart-59-48.png"></a>
-                    </div>
-                </div>
-            </div>
-            <hr>
+                <a href="#" id="Idaccount"style="font-size:30px;position:relative; bottom:10px;">CreateAccount</a>
+                <a href="#" id="Idlogin" style="font-size:30px;position:relative; bottom:10px;">Login</a>
+                <span a href="#" i class="fa fa-fw fa-user" style="font-size:45px;position:relative; bottom:8px;"></i></a></span>
+                <span a href="#" i class="bi bi-bag-plus-fill"style="font-size:45px;position:relative; bottom:8px;"></i></a></span>
+                </form> 
+            </ul>
+        </div>
+        <a href="index2.php"><img src="LogoMakr.png" id="logo" style="position:relative; bottom: 60px; left:50px; height:60px; width:100px"></a>
+        <hr style="position: relative;bottom: 60px;">
+        <div class="items"style="position: relative;bottom: 60px;">
             <h1>Stools</h1>
             <div class="hpS-wrapper">
                 <div class="cH1_01_02_03">
                     <img src="HomeImage/plastichoiuseware/Stool/H1_01_02_03.png"id="idH1_01_02_03" alt="Stool">
+                    <p id="idtxtH_01_02_03">Stool</p>
                 </div>
                 <div class="cH1_04">
-                    <img src="HomeImage/plastichoiuseware/Stool/H1_04.png"id="idH1_04" alt="Magic Stool">
+                  <a href="magicStool.php">  <img src="HomeImage/plastichoiuseware/Stool/H1_04.png"id="idH1_04" alt="Magic Stool"></a>
+                  <p id="idtxtH1_04">Magic Stool</p>
                 </div>
                 <div class="cH1_05">
                     <img src="HomeImage/plastichoiuseware/Stool/H1_05.png"id="idH1_05" alt="Short Stool">
+                    <p id="idtxtH1_05">Short Stool</p>
                 </div>
                 <div class="cH1_06_07">
                     <img src="HomeImage/plastichoiuseware/Stool/H1_06_07.png"id="idH1_06_07" alt="Super_Medium_Stool Super_Short_Stool">
+                    <p id="idtxtH1_06_07">Super Medium/Super Short Stool</p>
                 </div>
                 
             </div>
@@ -134,5 +134,6 @@
                 <img src="HomeImage/plastichoiuseware/Coffee Cup/H27_01.png" alt="Water Glass">
                 <img src="HomeImage/plastichoiuseware/Coffee Cup/H27_02.png" alt="Diamond Glass">
             </div>
-        </div>
+        </div>   
     </body>
+</html>

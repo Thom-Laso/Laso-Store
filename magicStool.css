@@ -1,0 +1,166 @@
+body {
+    background-color: rgb(247, 236, 236);
+  }
+  
+  
+  form.search input[type=text] {
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    float: left;
+    width: 400px;
+    background: #f1f1f1;
+  }
+  
+  form.search button {
+    float: left;
+    width: 5%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  
+  form.search button:hover {
+    background: #0b7dda;
+  }
+  
+  form.search::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(167, 83, 247);
+    height:60px;
+  }
+  
+  li {
+    float: right;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #111;
+  }
+  #Idaccount{
+    text-decoration: none;
+    margin-right: 10px;
+    color:yellow;
+  }
+  #Idlogin{
+    text-decoration: none;
+    color:yellow;
+  }
+  
+  span {
+    display: inline-block;
+    color:yellow;
+  }
+
+  /*Style for the image*/
+h1{
+    text-align: center;
+}
+#idH1_04{
+    display: block;
+   /* margin-left: auto;
+    margin-right: auto;*/
+    height: 300px;
+    width: 300px;
+}
+p{
+    height: 500px;
+    width: 700px;
+    font-weight: bold;
+    font-size: medium;
+    position: relative;left: 300px;bottom: 400px;
+}
+h3{
+  font-size: 30px;
+  position:relative;
+  margin-left: 50px;
+  color: rgb(212, 198, 0);
+}
+
+button {
+  --glow-color: rgb(217, 176, 255);
+  --glow-spread-color: rgba(191, 123, 255, 0.781);
+  --enhanced-glow-color: rgb(231, 206, 255);
+  --btn-color: rgb(100, 61, 136);
+  border: .25em solid var(--glow-color);
+  padding: 1em 3em;
+  color: var(--glow-color);
+  font-size: 15px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 1em .25em var(--glow-color),
+         0 0 4em 1em var(--glow-spread-color),
+         inset 0 0 .75em .25em var(--glow-color);
+  text-shadow: 0 0 .5em var(--glow-color);
+  position: relative;
+  transition: all 0.3s;
+ }
+ 
+ button::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--glow-spread-color);
+  filter: blur(2em);
+  opacity: .7;
+  transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+ }
+ 
+ button:hover {
+  color: var(--btn-color);
+  background-color: var(--glow-color);
+  box-shadow: 0 0 1em .25em var(--glow-color),
+         0 0 4em 2em var(--glow-spread-color),
+         inset 0 0 .75em .25em var(--glow-color);
+ }
+ 
+ button:active {
+  box-shadow: 0 0 0.6em .25em var(--glow-color),
+         0 0 2.5em 2em var(--glow-spread-color),
+         inset 0 0 .5em .25em var(--glow-color);
+ }
+
+ #count-el{
+   width: 40px;
+   height: 30px;
+ }
+#increment-btn{
+ font-size: 10px;
+}
+#decrement-btn{
+  font-size: 10px;
+ }
+ .star{
+   color: rgb(21, 255, 0);
+ }

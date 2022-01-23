@@ -1,140 +1,88 @@
 /*Master Styles*/
 body {
-  font-family: "Lobster", sans-serif;
-  margin: 0px;
-  background: #333;
+  background-color: rgb(247, 236, 236);
 }
 
-.container {
+/*.container {
   display: grid;
   grid-template-columns: 1fr;
 }
 /*Navigation Styles*/
-.nav-wrapper {
-  display: flex;
-  justify-content: space-between;
-  padding: 38px;
-  font-size: 30px;
-  text-decoration: none;
-  font-weight: bolder;
+form.search input[type=text] {
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  float: left;
+  width: 400px;
+  background: #f1f1f1;
 }
 
-.left-side {
-  display: flex;
-}
-
-.nav-wrapper > .left-side > div {
+form.search button {
+  float: left;
+  width: 5%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 15px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
   margin-right: 20px;
-  font-size: 0.9em;
 }
 
-.nav-link-wrapper {
-  height: 22px;
-  border-bottom: 1px solid transparent;
-  transition: border-bottom 0.5s;
+form.search button:hover {
+  background: #0b7dda;
 }
 
-.nav-link-wrapper a {
-  color: #8a8a8a;
-  text-decoration: none;
-  transition: color 0.5s;
+form.search::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(167, 83, 247);
+  height:60px;
 }
 
-/*.nav-link-wrapper:hover {
-  border-bottom: 1px solid black;
-}*/
-#cart {
-  text-decoration: none;
-  color: red;
-}
-#cart:hover {
-  color: rgb(132, 0, 255);
-}
-.nav-link-wrapper a:hover {
-  color: black;
+li {
+  float: right;
 }
 
-/*.active-nav-link {
-  border-bottom: 1px solid black;
-}*/
-
-.active-nav-link a {
-  color: black !important ;
-}
-/*Portfoliio Styles*/
-h1 {
-  padding-left: 20px;
-}
-
-.portfolio-items-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.portfolio-items-wrapper {
-  position: relative;
-}
-
-.portfolio-img-background {
-  height: 350px;
-  width: 200%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.img-text-wrapper {
-  position: absolute;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+li a {
+  display: block;
+  color: white;
+  font-size: 40px;
   text-align: center;
-  padding-left: 100px;
-  padding-right: 100px;
+  padding: 14px;
+  text-decoration: none;
 }
 
-.logo-wrapper img {
-  width: 50%;
-  margin-bottom: 20px;
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+#Idaccount{
+  text-decoration: none;
+  margin-right: 10px;
+  color:yellow;
+}
+#Idlogin{
+  text-decoration: none;
+  color:yellow;
 }
 
-.img-text-wrapper .subtitle {
-  transition: 1s;
-  font-weight: 600;
-  color: transparent;
+span {
+  display: inline-block;
+  color:yellow;
 }
 
-/*Need to be more specific with selector*/
-.img-text-wrapper:hover .subtitle {
-  font-weight: 600;
-  color: lightseagreen;
-}
 
-.img-darken {
-  transition: 1s;
-  filter: brightness(10%);
-}
-
-/*About Page*/
-.two-column-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.profile-image-wrapper img {
-  width: 100%;
-}
-
-.profile-content-wrapper {
-  padding: 30px;
-}
-
-.profile-content-wrapper h1 {
-  color: lightseagreen;
-}
 
 /*Stool Wrapper Styles*/
 .hpS-wrapper {
@@ -242,6 +190,9 @@ h1 {
   width: 300px;
   height: 300px;
 }
+#idtxtH1_04{
+  text-decoration-line: underline;
+}
 #idH1_04 {
   width: 100%;
   height: 100%;
@@ -256,9 +207,15 @@ h1 {
   width: 300px;
   height: 300px;
 }
+#idtxtH_01_02_03{
+  text-decoration-line: underline;
+}
 #idH1_05 {
   width: 100%;
   height: 100%;
+}
+#idtxtH1_05{
+  text-decoration-line: underline;
 }
 
 .cH1_06_07 {
@@ -273,6 +230,9 @@ h1 {
 #idH1_06_07 {
   width: 100%;
   height: 100%;
+}
+#idtxtH1_06_07{
+  text-decoration-line: underline;
 }
 
 .cH10_01 {

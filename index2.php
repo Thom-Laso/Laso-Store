@@ -65,12 +65,12 @@
                     </div>
             </div>
         </div>
-        <img src="LogoMakr.png" id="logo" style="position:relative; bottom: 660px; left:50px; height:60px; width:100px">   
+        <img src="LogoMakr.png" id="logo" style="position:relative; bottom: 660px; left:50px; height:60px; width:100px"> 
     
 
         <div class="HomeItems"style="position: relative;">
             <div class="indHPlastic"style="position: relative; bottom:1px">
-                <a href="householdplastics.html">
+                <a href="householdplastics.php">
                     <img src="HomeImage/housejoldPlastic.png" id="inHouseP">
                 </a>
             </div>
