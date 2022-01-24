@@ -29,7 +29,7 @@
     <div class="item"style="position:relative; bottom:60px">
         <h1>Magic Stool</h1>
         <div class="imgMagicStool">
-            <img src="HomeImage/plastichoiuseware/Stool/H1_04.png"id="idH1_04" alt="Magic Stool">
+            <img src="Items/plastichoiuseware/Stool/H1_04.png"id="idH1_04" alt="Magic Stool">
             <div class="star">
                 <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></i>
             </div>

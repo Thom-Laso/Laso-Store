@@ -66,14 +66,11 @@
 
 <?php
     if(isset($_POST['update'])){
-        $ItemId=$_POST["txtbxItmId1"];
-        $ItemName=$_POST["txtbxItmName"];
-        $ItemImage=$_POST["txtbxItmImage"];
+        $uItemId=$_POST["txtbxItmId1"];
+        $uItemName=$_POST["txtbxItmName"];
+        $uItemImage=$_POST["txtbxItmImage"];
         
-        //echo "sdsa.",$ItemId;
-        if($sql="update houseplastics set ItemName='$ItemName',ItemImage='$ItemImage'where ItemId='$ItemId'"){
-            echo "Update Successfully";
-        } else
-        echo "Update Failed";
-    } 
+        echo "sdsa".$uItemId;
+        $sql="UPDATE houseplastics SET ItemName='$uItemName', ItemImage='$uItemImage'where ItemId='$uItemId'";
+    }
 ?>
