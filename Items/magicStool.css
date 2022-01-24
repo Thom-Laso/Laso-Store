@@ -164,3 +164,16 @@ button {
  .star{
    color: rgb(21, 255, 0);
  }
+
+ #count-el{
+   border-width: 5px ;
+ }
+ #btn-shop{
+   margin-top: 20px;
+ }
+ #btn-buy{
+  margin-top: 20px;
+}
+#btn-cart{
+  margin-top: 20px;
+}

@@ -111,7 +111,7 @@
                 </div>
                 
             </div>
-            <h1>Jugs/Basins</h1>
+           <!-- <h1>Jugs/Basins</h1>
             <div class="hpJB-wrapper">
                 <img src="Items/plastichoiuseware/Jugs_Basins/H05_01_02_03.png" alt="Classic Bowl">
                 <img src="Items/plastichoiuseware/Jugs_Basins/H4_01_06.png" alt="Beauty Basin">
@@ -133,7 +133,7 @@
                 <img src="Items/plastichoiuseware/Coffee Cup/H25_01.png" alt="Coffee Cup">
                 <img src="Items/plastichoiuseware/Coffee Cup/H27_01.png" alt="Water Glass">
                 <img src="Items/plastichoiuseware/Coffee Cup/H27_02.png" alt="Diamond Glass">
-            </div>
+            </div>-->
         </div>   
     </body>
 </html>

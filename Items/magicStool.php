@@ -29,7 +29,7 @@
     <div class="item"style="position:relative; bottom:60px">
         <h1>Magic Stool</h1>
         <div class="imgMagicStool">
-            <img src="Items/plastichoiuseware/Stool/H1_04.png"id="idH1_04" alt="Magic Stool">
+            <img src="plastichoiuseware/Stool/H1_04.png"id="idH1_04" alt="Magic Stool">
             <div class="star">
                 <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></i>
             </div>
@@ -54,10 +54,10 @@
                 parallel with fold-up legs. 
                </p>
            </div>
-           <div class="button"style="position:relative; bottom:500px">
-                <button id="btnshop">continue shopping</button>
-                <button id="btn cart">Add to cart</button> 
-                <button id="btn cart">Buy Now</button>
+           <div class="button"style="position:relative; bottom:1000px;left:1050px;">
+                <button id="btn-shop">continue shopping</button><br>
+                <button id="btn-cart">Add to cart</button><br> 
+                <button id="btn-buy">Buy Now</button><br>
            </div>
     </div>
 </body>
