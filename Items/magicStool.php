@@ -55,9 +55,9 @@
                </p>
            </div>
            <div class="button"style="position:relative; bottom:1000px;left:1050px;">
-                <button id="btn-shop">continue shopping</button><br>
-                <button id="btn-cart">Add to cart</button><br> 
-                <button id="btn-buy">Buy Now</button><br>
+                <button id="btn-shop" onclick="JSbtnShop()">continue shopping</button><br>
+                <button id="btn-cart">Add to Cart</button><br> 
+                <button id="btn-buy">Buy Now</a></button><br>
            </div>
     </div>
 </body>

@@ -13,3 +13,7 @@ function decrement() {
     }
     let countEl=document.getElementById("count-el").value=count;
 } 
+
+function JSbtnShop(){
+    window.location.href = "../householdplastics.php";//Thank you Yes it works
+}
