@@ -1,5 +1,5 @@
 <?php
-    $dbcon= new mysqli("localhost","root", "","lasostore_db");
+    $dbcon= new mysqli("localhost","root", "","lasodb");
     if(!$dbcon)
         echo "not Connected";
     else

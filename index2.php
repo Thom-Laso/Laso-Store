@@ -1,9 +1,16 @@
+<?php
+    /*session_start();
+    if (!isset($_SESSION['txtbxUsername']))
+    header('Location: login_details.php');
+    */
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
         <title>index</title>
-        <link rel="stylesheet" href="index2.css">
-        <script src="index2.js"></script>
+        <link rel="stylesheet" href="HomePage.css">
+        <script src="HomePage.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"><!--resposive for different size-->
                      <!-- Load icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -13,18 +20,28 @@
         <div class="navbar">
             <ul>
                 <!-- The form -->
-                <form class="search" action="action_page.php" style="position: relative;top:10px;left: 400px;">
+                <form class="search" action="action_page.php">
                 <input type="text" placeholder="Search.." name="search">
-                <button type="submit"><i class="fa fa-search"></i></button>
+                <button type="submit">
+                    <div class="binoculars">
+                    <i class="bi bi-binoculars-fill"></i>
+                    </div></button>
     
-                <a href="#" id="Idaccount"style="font-size:30px;position:relative; bottom:10px;">CreateAccount</a>
-                <a href="#" id="Idlogin" style="font-size:30px;position:relative; bottom:10px;">Login</a>
-                <span a href="#" i class="fa fa-fw fa-user" style="font-size:45px;position:relative; bottom:8px;"></i></a></span>
-                <span a href="#" i class="bi bi-bag-plus-fill"style="font-size:45px;position:relative; bottom:8px;"></i></a></span>
+                <a href="SignUp.php" id="Idaccount">SignUp</a>
+                <a href="login_details.php" id="Idlogin" >Login</a>
+                <a href="About.html" id="btnUser"span i class="fa fa-fw fa-user" ></i></a></span>
+                <a href="#" id="btnCart" span i class="bi bi-bag-plus-fill"></i></a></span>
+                <a href="logout.php" id="btnLogout" span i class="bi bi-power"></i></span></a>
                 </form> 
             </ul>
         </div>
-
+     
+            <div class="logoWrapper" >
+                <img src="Items/LogoMakr.png" id="logo"> 
+            </div>
+  
+       
+        
         <div class="SliderBody">
             <div class="slider">
                 <div class="slides">
@@ -38,10 +55,10 @@
                         <img src="Slides/slideBucket.png" alt="">
                     </div>
                     <div class="slide">
-                        <img src="Slides/slideWardrobe.png" alt="">
+                        <img src="Slides/slideRack.png" alt="HomeWardrobe">
                     </div>
                     <div class="slide">
-                        <img src="Slides/slideRack.png" alt="">
+                        <img src="Slides/slideWardrobe.png" alt="">
                     </div>
                     <div class="slide">
                         <img src="Slides/wardrobe.png" alt="">
@@ -65,37 +82,15 @@
                     </div>
             </div>
         </div>
-        <img src="LogoMakr.png" id="logo" style="position:relative; bottom: 660px; left:50px; height:60px; width:100px"> 
-    
-
-        <div class="HomeItems"style="position: relative;">
-            <div class="indHPlastic"style="position: relative; bottom:1px">
-                <a href="householdplastics.php">
-                    <img src="HomeImage/housejoldPlastic.png" id="inHouseP">
-                </a>
-            </div>
-            
-            <div class="indFPlastic"style="position: relative;bottom:465px; left:445px">
-                <a href="default.asp">
-                    <img src="HomeImage/furnitureHome.png" id="inHouseF">
-                </a>
-            </div>
-
-            <div class="indWrdbPlastic"style="position: relative;bottom:929px; left:900px">
-                <a href="default.asp">
-                    <img src="HomeImage/homeWardrobe.png" id="inHouseWrdb">
-                </a> 
-            </div>
-        </div>
-    
+        <a  href="Shop.php"><button id="btn-liquid">
+            <span><b>Shop</b></span>
+            <div class="liquid"></div>
+        </button></a>
+        <footer>
+            <br><div class="whatsapp"><i class="bi bi-whatsapp">&nbsp; 6909118384</i><br></div>
+            <div class="telephone"><i class="bi bi-telephone-fill">&nbsp;&nbsp;9862681385</i><br></div>
+            <h5 id="sign">Design by: Laso</h5>
+                <h5 id="hire">To hire a Web Developer:&nbsp;<i class="bi bi-envelope"><i>&nbsp;thomlinpjlaso@gmail.com</i></i></h5>
+        </footer>
     </body>
 </html>
-<?php
-                    $search = $_POST['search'];
-                    $search = "www.google.com";//THIS WOULD WORK, BUT I WAS SHOWING HOW TO USE FORM
-                    
-                    //IF WORD FOUND IN HOME PAGE
-                    if (stripos($home, $search) !== false) {//USING EXAMPLE.COM TO SHOW IT WORKS
-                        echo '<a href="'.$homePageName.'">'.$homePageName.'</a>';
-                    }
-                    ?>

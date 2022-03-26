@@ -1,3 +1,9 @@
+<?php
+    require ("../connection.php");
+    session_start();
+    if (!isset($_SESSION['txtbxUsername']))
+    header('Location: login_details.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,10 +24,11 @@
             <input type="text" placeholder="Search.." name="search">
             <button type="submit"><i class="fa fa-search"></i></button>
 
-            <a href="#" id="Idaccount"style="font-size:30px;position:relative; bottom:10px;">CreateAccount</a>
-            <a href="#" id="Idlogin" style="font-size:30px;position:relative; bottom:10px;">Login</a>
-            <span a href="#" i class="fa fa-fw fa-user" style="font-size:45px;position:relative; bottom:8px;"></i></a></span>
-            <span a href="#" i class="bi bi-bag-plus-fill"style="font-size:45px;position:relative; bottom:8px;"></i></a></span>
+            <a href="SignUp.php" id="Idaccount"style="font-size:30px;position:relative; bottom:10px;">CreateAccount</a>
+                <a href="login_details.php" id="Idlogin" style="font-size:30px;position:relative; bottom:10px;">Login</a>
+                <a href="#" id="btnUser"span i class="fa fa-fw fa-user" style="font-size:45px;position:relative; bottom:8px;"></i></a></span>
+                <a href="#" id="btnCart" span i class="bi bi-bag-plus-fill"style="font-size:45px;position:relative; bottom:8px;"></i></a></span>
+                <a href="logout.php" id="btnLogout" span i class="bi bi-power" style="font-size:45px;position:relative; bottom:8px;"></i></span></a>
             </form> 
         </ul>
     </div>

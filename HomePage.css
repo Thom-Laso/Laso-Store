@@ -1,0 +1,614 @@
+body {
+    background-color: rgb(255, 252, 81);
+  }
+  .logoWrapper{
+    width: 60px;
+    height: 60px;
+    position:relative;
+    bottom:70px;left:100px;
+  }
+  #logo{
+    width:100%;
+    height:100%
+  }
+  form.search{
+    position: relative;
+    top:10px;
+    left: 400px;
+  }
+  form.search input[type=text] {
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    float: left;
+    width: 400px;
+    background: #f1f1f1;
+  }
+  
+  form.search button {
+    float: left;
+    width: 5%;
+  
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  
+  form.search button:hover {
+    background: #0b7dda;
+  }
+  
+  form.search::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #302BED;
+    height:60px;
+  }
+  
+  li {
+    float: right;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #111;
+  }
+  #Idaccount{
+    font-size:30px;
+    position:relative; bottom:10px;
+    text-decoration: none;
+    margin-right: 10px;
+    color:yellow;
+  }
+  #Idlogin{
+    font-size:30px;position:relative; bottom:10px;
+    text-decoration: none;
+    color:yellow;
+  }
+  #btnUser {
+    font-size:45px;position:relative; bottom:8px;
+    display: inline-block;
+    color:yellow;
+  }
+  #btnCart {
+    font-size:45px;position:relative; bottom:8px;
+    display: inline-block;
+    color:yellow;
+  }
+  #btnLogout {
+    font-size:45px;position:relative; bottom:8px;
+    display: inline-block;
+    color:yellow;
+  }
+  .SliderBody{
+    height:90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    padding: 0;
+    background:rgb(255, 253, 131)
+  }
+  
+  .slider{
+    width: 800px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+  
+  }
+  
+  .slides{
+    width:500%;
+    height:500px;
+    display:flex;
+  }
+  
+  .slides input{
+    display: none;
+  }
+  .slide{
+    width: 20%;
+    transition: 1s;
+  }
+  .slide img{
+    width: 1000px;
+    height: 500px;
+  }
+  
+  /*Style for manual navigation*/
+  .navigation-manual{
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+  }
+  .manual-btn{
+    border: 2px solid #0b7dda;
+    
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+  }
+  .manual-btn:not(:last-child){
+    margin-right:40px;
+  }
+  .manual-btn:hover{
+    background: #0b7dda;
+  }
+  #radio1:checked ~ .first{
+    margin-left: 0;
+  }
+  #radio2:checked ~ .first{
+    margin-left: -20%;
+  }
+  #radio3:checked ~ .first{
+    margin-left: -40%;
+  }
+  #radio4:checked ~ .first{
+    margin-left: -60%;
+  }
+  
+  /*style for automatic navigation*/
+  .navigation-auto{
+    position: absolute;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin-top: 460px;
+  }
+  .navigation-auto div{
+    border: 2px double #0b7dda;
+  
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+  }
+  .navigation-auto div:not(:last-child){/*to hide the navigation button*/
+    margin-right: 40px;
+  }
+  
+  
+  #radio1:checked ~ .navigation-auto .auto-btn1{
+    background:#0b7dda;
+  }
+  #radio2:checked ~ .navigation-auto .auto-btn2{
+    background:#0b7dda;
+  }
+  #radio3:checked ~ .navigation-auto .auto-btn3{
+    background:#0b7dda;
+  }
+  #radio4:checked ~ .navigation-auto .auto-btn4{
+    background:#0b7dda;
+  }
+  
+  #logo {
+    margin-top: 10px;
+  
+    
+  }
+  #cart {
+    padding-right: 10px;
+    padding-top: 5px;
+  }
+  #cart:hover {
+    padding-top: 0.5px;
+  }
+  
+  /* From cssbuttons.io by @westitan */
+  #btn-liquid {
+   position: relative;
+   padding: 19px 36px;
+   display: block;
+   margin-top: 10px;
+   text-decoration: none;
+   text-transform: uppercase;
+   overflow: hidden;
+   border-radius: 40px;
+   border: none;
+  }
+  
+  #btn-liquid span {
+   position: relative;
+   color: #fff;
+   font-family: Arial;
+   letter-spacing: 8px;
+   z-index: 1;
+  }
+  #btn-liquid{
+    left: 50%;
+  }
+  
+  
+  button .liquid {
+   position: absolute;
+   top: -80px;
+   left: 0;
+   width: 100%;
+   height: 200px;
+   background: #4973ff;
+   box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
+   transition: .5s;
+  }
+  
+  button .liquid::after,
+  button .liquid::before {
+   content: '';
+   width: 200%;
+   height: 200%;
+   position: absolute;
+   top: 0;
+   left: 50%;
+   transform: translate(-50%, -75%);
+   background: #fff;
+  }
+  
+  button .liquid::before {
+   border-radius: 45%;
+   background: rgba(20, 20, 20, 1);
+   animation: animate 5s linear infinite;
+  }
+  
+  button .liquid::after {
+   border-radius: 40%;
+   background: rgba(20, 20, 20, .5);
+   animation: animate 10s linear infinite;
+  }
+  
+  button:hover .liquid {
+   top: -120px;
+  }
+  
+  @keyframes animate {
+   0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+   }
+  
+   100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+   }
+  }
+  
+  
+  /*Footer*/
+  
+  footer{
+    margin-top: 20px;
+    bottom:50;
+    width:100%;
+    height:100px;   /* Height of the footer */
+    background:rgba(65, 67, 68, 0.637);
+  }
+  /*.whatsapp{
+    
+    position: absolute;
+    font-size: 30px;
+    bottom: -190px;
+    left: 100px;
+  }
+  .telephone{
+    position: absolute;
+    font-size: 30px;
+    bottom:-230px;
+    left: 100px;
+  }*/
+  
+  
+  @media screen and (max-width: 1000px) {
+    .logoWrapper{
+      width: 40px;
+      height: 40px;
+      position:relative;
+      bottom:50px;left:20px;
+    }
+    #logo{
+      width:100%;
+      height:100%
+    }
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #302BED;
+      height:40px;
+    }
+    form.search{
+      position: relative;
+  
+      left: 80px;
+    }
+    form.search input[type=text] {
+      font-size: 5px;
+      border-radius: 5px;
+      border: 1px solid grey;
+      float: left;
+      width: 50px;
+      height: 2px;
+      background: #f1f1f1;
+    }
+    
+    form.search button {
+      float: left;
+      width: 10px;
+      height:24px;
+      
+      
+      background: #64f321;
+      color: yellow;
+      font-size: 15px;   
+      border-radius: 5px;
+      border: 1px solid grey;
+      border-left: none;
+      cursor: pointer;
+      
+    }
+    .binoculars{
+      position: relative;
+      bottom: 9px;
+      right:7px;
+    }
+    form.search button:hover {
+      background: #0b3bda;
+    }
+    
+    form.search::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+  
+    #Idaccount{
+      font-size:15px;
+      position:relative; 
+      top:3px;
+      right:8px;
+      text-decoration: none;
+      margin-right: 1px;
+      color:yellow;
+    }
+    #Idlogin{
+      font-size:15px;
+      position:relative; top:3px;
+      right:8px;
+      text-decoration: none;
+      color:yellow;
+    }
+    #btnUser {
+      font-size:15px;position:relative; top:3px;right:8px;
+      display: inline-block;
+      color:yellow;
+    }
+    #btnCart {
+      font-size:15px;position:relative; top:3px;right:8px;
+      display: inline-block;
+      color:yellow;
+    }
+    #btnLogout {
+      font-size:15px;position:relative;top:4px;right:8px;
+      display: inline-block;
+      color:yellow;
+    }
+  
+    .SliderBody{
+      height:50vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+     
+     
+      background:rgb(94, 150, 255);
+    }
+    .slider{
+      width: 300px;
+      height: 300px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .slides{
+      width: 500%;
+      height: 500px; 
+      display: flex;
+    }
+   .slides input{
+     display: none;
+   }
+   .slide{
+     width: 20%;
+     transition: 1s;
+   }
+   .slide img{
+     width: 300px;
+     height: 200px;
+   }
+    /*Style for manual navigation*/
+  .navigation-manual{
+    position: absolute;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    bottom: 330px;
+    left:130px;
+  }
+  .manual-btn{
+    border: 5px double yellow;
+    padding: 1px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+  }
+  #radio1:checked ~.first{
+    margin-left:0;
+  }
+  #radio2:checked ~.first{
+    margin-left:-20%;
+  }
+  #radio3:checked ~.first{
+    margin-left:-40%;
+  }
+  #radio4:checked ~.first{
+    margin-left:-60%;
+  }
+  
+  /*style for automatic navigation*/
+  .navigation-auto{
+    position: absolute;
+    display: flex;
+    width: 100px;
+    justify-content: center;
+    margin-top: 100px;
+    bottom: 330px;
+    left:130px;
+  
+  }
+  .navigation-auto div{
+    border: 5px double yellow;
+    padding: 1px;
+    border-radius: 10px;
+    transition: 1s;
+  }
+  
+  .navigation-auto div:not(:last-child){
+    margin-right: 40px;
+  }
+  
+  #radio1:checked ~ .navigation-auto .auto-btn1{
+    background:yellow;
+  }
+  #radio2:checked ~ .navigation-auto .auto-btn2{
+    background:yellowb;
+  }
+  #radio3:checked ~ .navigation-auto .auto-btn3{
+    background:yellow;
+  }
+  #radio4:checked ~ .navigation-auto .auto-btn4{
+    background:yellow;
+  }
+  /* From cssbuttons.io by @westitan */
+  #btn-liquid {
+    position: relative;
+    padding: 19px 36px;
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    border-radius: 40px;
+    border: none;
+    align-self: center;
+   }
+   
+   #btn-liquid span {
+    position: relative;
+    color: #fff;
+    font-family: Arial;
+    letter-spacing: 8px;
+    z-index: 1;
+   }
+   
+   button .liquid {
+    position: absolute;
+    top: -80px;
+    left: 0;
+    width: 150%;
+    height: 200px;
+    background: #4973ff;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
+    transition: .5s;
+   }
+   #btn-liquid{
+     left:30%;
+   }
+   button .liquid::after,
+   button .liquid::before {
+    content: '';
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    background: #fff;
+   }
+   
+   button .liquid::before {
+    border-radius: 45%;
+    background: rgba(20, 20, 20, 1);
+    animation: animate 5s linear infinite;
+   }
+   
+   button .liquid::after {
+    border-radius: 40%;
+    background: rgba(20, 20, 20, .5);
+    animation: animate 10s linear infinite;
+   }
+   
+   button:hover .liquid {
+    top: -150px;
+   }
+   
+   @keyframes animate {
+    0% {
+     transform: translate(-36%, -75%) rotate(0deg);
+    }
+   
+    100% {
+     transform: translate(-60%, -75%) rotate(360deg);
+    }
+   }
+  
+   /*Footer*/
+  footer {
+    margin-top: 20px;
+    bottom:50;
+    width:100%;
+    height:100px;   /* Height of the footer */
+    background:rgba(65, 67, 68, 0.637);
+  }
+  .bi-whatsapp{
+    position: absolute;
+    bottom: 150px;
+    left: 40px;
+  }
+  .bi-telephone-fill{
+    position: absolute;
+    left: 40px;
+  }
+  #sign{
+    position:absolute;
+    bottom: 100px;
+    left: 230px;
+  }
+  
+  #hire{
+    position:absolute;
+    bottom: 80px;
+    left: 40px;
+  }
+  
+  }

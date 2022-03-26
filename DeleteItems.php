@@ -4,8 +4,8 @@
 <?php/*
     session_start();
     if (!isset($_SESSION['txtbxUsername']))
-    header('Location: login_details.php');
-*/?>
+    header('Location: login_details.php');*/
+?>
 
 <html>
     <head>
@@ -16,7 +16,7 @@
             <?php
             //Display Items
                   
-                    $sql="select * from houseplastics";
+                    $sql="select * from itemtb";
                     $result=$dbcon -> query($sql);
                 
                     echo "<table border=2><tr><td><b>Item Name</b></td><td><b>Item Id</b></td><td><b>Item Image</b></td></tr>";

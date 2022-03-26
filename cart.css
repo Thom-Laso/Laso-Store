@@ -1,0 +1,31 @@
+ body{
+     background-color: white;
+ }
+ .cart-page{
+     margin:1em auto;
+ }
+ table{
+     width: 100%;
+     border-collapse: collapse;
+ }
+ .cart-info{
+     display:flex;
+     flex-wrap: wrap;
+ }
+ th{
+     text-align: left;
+     padding: 0.0625em;
+     color: white;
+     background: #ff523b;
+     font-weight: normal;
+ }
+ td{
+     padding: 0.125em 0.0625em;
+ }
+
+ td{
+     width:0.5em;
+     height:0.375em;
+     padding:0.0625em;
+
+ }

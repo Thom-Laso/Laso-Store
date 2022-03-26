@@ -1,11 +1,11 @@
 <?php
     include("connection.php");
 ?>
-<?php/*
+<?php
     session_start();
     if (!isset($_SESSION['txtbxUsername']))
     header('Location: login_details.php');
-*/?>
+?>
 
 <html>
     <head>

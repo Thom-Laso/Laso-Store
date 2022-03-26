@@ -71,8 +71,15 @@ li a:hover {
   text-decoration: none;
   color:yellow;
 }
-
-span {
+#btnUser {
+  display: inline-block;
+  color:yellow;
+}
+#btnCart {
+  display: inline-block;
+  color:yellow;
+}
+#btnLogout {
   display: inline-block;
   color:yellow;
 }

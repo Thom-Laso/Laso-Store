@@ -5,8 +5,8 @@
 <?php/*
     session_start();
     if (!isset($_SESSION['txtbxUsername']))
-    header('Location: login_details.php');
-*/?>
+    header('Location: login_details.php');*/
+?>
 <html>
     <head>
         <title>Insert Items</title>
@@ -14,57 +14,46 @@
     <body>
         <center>
         <?php
-            if(isset($_POST['submit'])){
-                $itemName=$_POST["txtbxItemName"];
-                $itemId=$_POST["txtbxItemId"];
+           if(isset($_POST['submit'])){
 
-               /* $sqlItem="INSERT INTO houseplastics(ItemName, ItemId) VALUES('$itemName','$itemId')";
-                if(mysqli_query($dbcon, $sqlItem)){
-                    echo "Item Inserted Successfully <br>";
+            $itemName=$_POST["txtbxItemName"];
+            $itemPrice=$_POST["txtbxItemPrice"];
+            $itemDPrice=$_POST["txtbxItemDiscount"];
+                  
+            $target ="uploaded/".basename($_FILES['image']['name']);
+            $image=$_FILES['image']['name'];
+            $tempname=$_FILES['image']['tmp_name'];
+            move_uploaded_file($tempname,$target);
+           if($itemName !="" && $itemPrice!="" && $itemDPrice!="" && $target!=""){
+                $sql= "INSERT  into itemtb(product_name, product_fprice, product_price, product_image) VALUES ('$itemName','$itemDPrice','$itemPrice','$target')";
+                if(mysqli_query($dbcon,$sql)){
+                    echo "Items Uploaded Successfully<br>";
                 }else
-                echo "Insert Error <br>";
-
-                //target directory to store the uploaded image
-                $target ="uploaded/".basename($_FILES['image']['name']);
-                //get the image from the form
-                $image=$_FILES['image']['name'];
-                $tempname=$_FILES['image']['tmp_name'];
-                $sqlImg="INSERT INTO houseplastics(ItemImage) VALUES('$image')";
-                mysqli_query($dbcon, $sqlImg);*/
-
-                /*/moving the uploaded image into the
-                if(move_uploaded_file($_FILES['image']['name'], $target)){
-                    echo "Image Uploaded";
-                }else{
-                    echo "Image Cannot Upload";
-                }*/
-                $target ="uploaded/".basename($_FILES['image']['name']);
-                $image=$_FILES['image']['name'];
-                $tempname=$_FILES['image']['tmp_name'];
-                move_uploaded_file($tempname,$target);
-                if($itemName!="" && $itemId!="" && $image!=""){
-                    $query="INSERT INTO houseplastics VALUES('$itemName','$itemId', '$target')";
-                    $data=mysqli_query($dbcon,$query);
-                    if($data){
-                        echo "Data inserted into database";
-                    }
-                }
-            }
+                    echo "Upload Error<br>";
+            
+           }
+           
+            
+        }
         ?>
 
-        <form method="POST" action="" enctype="multipart/form-data">
+<form method="POST" action="" enctype="multipart/form-data">
             <table>
                 <tr>
                     <td><h1><b>Item Name:</b></h1></td>
                     <td><input type="text" name="txtbxItemName"></td>
                 </tr>
                 <tr>
-                    <td><h1><b>Item Id:</b></h1></td>
-                    <td><input type="text" name="txtbxItemId"></td>
+                    <td><h1><b>Item Real Price:</b></h1></td>
+                    <td><input type="numeric" name="txtbxItemPrice"></td>
+                </tr>
+                <tr>
+                    <td><h1><b>Item Fake Price:</b></h1></td>
+                    <td><input type="numeric" name="txtbxItemDiscount"></td>
                 </tr>
                 <tr>
                     <td><h1><b>Image:</b></h1></td>
-                    <td><input type="file" name="image" ></td>
+                    <td><input type="file" name="image"></td>
                 </tr>
             </table>
             <button name="submit" id="btnInsert">INSERT</button>
