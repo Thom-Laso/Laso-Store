@@ -1,0 +1,15 @@
+#btn-cart {
+    font-size:30px;
+    display: inline-block;position: relative; left: 800px;
+    color:yellow;
+  }
+
+  #btn-logout {
+    display: inline-block;position: relative; left:730px; top: 10px;
+    color:yellow;
+  }
+
+  #btnUser {
+    display: inline-block;position: relative; left:350px; top: 10px;
+    color:yellow;
+  }

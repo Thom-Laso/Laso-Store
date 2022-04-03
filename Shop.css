@@ -131,9 +131,10 @@ li a:hover {
   padding: 3% 2%;
 }
 img{
-    max-width:100%;
+    max-width:200%;
     height:auto;
-    
+    background: lightblue;
+    background: radial-gradient(white 30%, lightblue 70%);
     
 }
 .fa-star,

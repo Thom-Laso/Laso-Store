@@ -17,12 +17,12 @@ if(isset($_POST['add'])){// "add" from component.php
             echo '<script>alert("Your Product is already in the cart")</script>';
             echo "<script>window.location='Shop.php'</script>";
         }else{
-            $count=count($_SESSION['cart']);
+            $count=count($_SESSION['cart']);//this count function returns how many items are there in a session variable/array
             $item_array=array(
                 'product_id' =>$_POST['product_id']
             );
 
-            $_SESSION['cart']['$count']=$item_array;
+            $_SESSION['cart'][$count]=$item_array;
             //print_r($_SESSION['cart']);
         }
     }else{
