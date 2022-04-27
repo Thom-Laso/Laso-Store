@@ -4,6 +4,12 @@ session_start();
 require_once('DB/CreateDb.php');
 require_once('./DB/component.php');
 
+$user_id = $_SESSION['user_id']; //to get the user id of the one who login from Rlogin_details.php
+
+if(!isset($user_id))
+    header('location:Rlogin_details.php');
+
+    echo $user_id;
 //create instance of CreateDb.class
 $database = new CreateDb(dbname:"lasodb",tablename:"itemtb");
 
@@ -44,6 +50,7 @@ if(isset($_POST['add'])){// "add" from component.php
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Shop</title>
     <!--Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css" />
@@ -61,7 +68,7 @@ if(isset($_POST['add'])){// "add" from component.php
             <?php 
                 $result=$database->getData();
                 while($row = mysqli_fetch_assoc($result)){
-                    component($row['product_name'],$row['product_fprice'], $row['product_price'], $row['product_image'],$row['id']);
+                    component($row['product_name'],$row['product_fprice'], $row['product_price'], $row['product_image'],$row['item_id']);
                 }
             ?>
         </div>

@@ -86,6 +86,11 @@
             <span><b>Shop</b></span>
             <div class="liquid"></div>
         </button></a>
+
+        <a  href="WholesellerAccInst.php"><button id="btn-liquid">
+            <span><b>Wholeseller</b></span>
+            <div class="liquid"></div>
+        </button></a>
         <footer>
             <br><div class="whatsapp"><i class="bi bi-whatsapp">&nbsp; 6909118384</i><br></div>
             <div class="telephone"><i class="bi bi-telephone-fill">&nbsp;&nbsp;9862681385</i><br></div>

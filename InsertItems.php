@@ -19,13 +19,14 @@
             $itemName=$_POST["txtbxItemName"];
             $itemPrice=$_POST["txtbxItemPrice"];
             $itemDPrice=$_POST["txtbxItemDiscount"];
+            $itemWPrice=$_POST["txtbxItemWPrice"];
                   
             $target ="uploaded/".basename($_FILES['image']['name']);
             $image=$_FILES['image']['name'];
             $tempname=$_FILES['image']['tmp_name'];
             move_uploaded_file($tempname,$target);
-           if($itemName !="" && $itemPrice!="" && $itemDPrice!="" && $target!=""){
-                $sql= "INSERT  into itemtb(product_name, product_fprice, product_price, product_image) VALUES ('$itemName','$itemDPrice','$itemPrice','$target')";
+           if($itemName !="" && $itemPrice!="" && $itemDPrice!="" && $itemWPrice!="" && $target!=""){
+                $sql= "INSERT  into itemtb(product_name, product_fprice, product_price, product_Wprice product_image) VALUES ('$itemName','$itemDPrice','$itemPrice','$itemWPrice','$target')";
                 if(mysqli_query($dbcon,$sql)){
                     echo "Items Uploaded Successfully<br>";
                 }else
@@ -39,6 +40,7 @@
 
 <form method="POST" action="" enctype="multipart/form-data">
             <table>
+                <h1><b><u>Admin Insert Items</u></b></h1>
                 <tr>
                     <td><h1><b>Item Name:</b></h1></td>
                     <td><input type="text" name="txtbxItemName"></td>
@@ -50,6 +52,10 @@
                 <tr>
                     <td><h1><b>Item Fake Price:</b></h1></td>
                     <td><input type="numeric" name="txtbxItemDiscount"></td>
+                </tr>
+                <tr>
+                    <td><h1><b>Item Wholesale Price:</b></h1></td>
+                    <td><input type="numeric" name="txtbxItemWPrice"></td>
                 </tr>
                 <tr>
                     <td><h1><b>Image:</b></h1></td>

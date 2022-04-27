@@ -72,11 +72,11 @@
                         <i class="fa fa-fw fa-user fa-lg"></i> <!--fa-lg is the size of the icon-->
                     </h3>
                 </a> 
-                <a href="login_details.php" class="Login" id="IdLogin">
+                <!--<a href="Rlogin_details.php" class="Login" id="IdLogin">
                     <h3 class="px-5">
                         Login 
                     </h3>
-                </a> 
+                </a>--> 
             </div>
         </div>
     </nav>

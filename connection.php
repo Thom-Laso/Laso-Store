@@ -3,5 +3,5 @@
     if(!$dbcon)
         echo "not Connected";
     else
-        echo "1";
+        echo "";
 ?>

@@ -23,6 +23,7 @@ function component($productname,$productfprice,$productprice,$productimg, $produ
                     <small><s class=\"text-secondary\">&#8377; $productfprice</s></small><!--s tag is for stroke-->
                     <span class=\"price\">&#8377; $productprice</span>
                 </h5>
+               
                 <button type=\"submit\" class=\"btn btn-warning my-3\" name=\"add\">Add to cart<i class=\"fas fa-shopping-cart\"></i></button>
                 <input type='hidden' name='product_id' value='$productid'>
                 </div>
