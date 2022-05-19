@@ -37,19 +37,23 @@ if(!isset($user_id))
              <button name='submi'>Order</button>
              </form>
          </center>";*/
-            for($i=1; $i<=6; $i++){
-                
-                $sql="select * from itemtb WHERE item_id='$i'";
+            //for($i=1; $i<=6; $i++){
+              
+                $sql="select * from itemtb ";
                 $result=$dbcon -> query($sql);
-               
+                $IName="";
+                $IPrice="";
+                $IImage="";
                     if($result->num_rows>0){
                         while($row=$result->fetch_assoc()){
                             $ItemId=$row["item_id"];
                             $ItemName=$row["product_name"];
+                            //$IName.=$ItemName;
                             $ItemPrice=$row["product_price"];
+                            //$IPrice.=$ItemPrice;
                             //echo "<td>".$row["ItemImage"]."</td>";
                             $ItemImage="<img src='./".$row['product_image']."'height='70' width='70'>";
-
+                            //$IImage.=$ItemImage;
                             //goto outofFor;
                             
                         }
@@ -65,12 +69,12 @@ if(!isset($user_id))
                                     <td>$ItemName</td><td> &#8377 $ItemPrice</td><td><input type='numeric' name='txtbxWItmQnty' size='3'></td><td>$ItemImage</td>
                                 </tr>
                                    ";*/  
-            }
-            outofForItemName:
+           // }
+  /*          outofForItemName:
                 $IName=$ItemName;
                 $IPrice=$ItemPrice;
                 $IImage=$ItemImage;
-
+*/
         ?>
 
 <?php
@@ -119,9 +123,19 @@ if(!isset($user_id))
             <table>
       
                     <tr><td><b>Item Name</b></td><td><b>Item Price</b></td><td><b>Item Quantity</b></td></tr>
+                    
+                    
                     <tr>
-                        <td><?php echo $IName ?></td><td>&#8377;<?php echo $IPrice?></td><td><input type="number" name="txtbxWItmQnty" size="3" value="1"></td><td><?php echo $IImage ?></td><td><input type="checkbox" name="chkbxWItm"></td>
+                        <td><?php echo $ItemName;  ?></td><td>&#8377;<?php echo $ItemPrice;?></td><td><input type="number" name="txtbxWItmQnty" size="3" value="1"></td><td><?php echo $ItemImage;?></td><td><input type="checkbox" name="chkbxWItm"></td>
                     </tr>
+                    
+                    <tr>
+                        <td>Item 1</td><td>&#8377;000</td><td><input type="number" name="txtbxWItmQnty" size="3" value="1"></td><td><img src=uploaded/nmSmartAlmirah_HotStamping.png height="70px"; weight="70px";> </td><td><input type="checkbox" name="chkbxWItm"></td>
+                    </tr>
+                    <tr>
+                        <td>Item 2</td><td>&#8377;000</td><td><input type="number" name="txtbxWItmQnty" size="3" value="1"></td><td><img src=uploaded/nmSmartShoeBox.png height="70px"; weight="70px";></td><td><input type="checkbox" name="chkbxWItm"></td>
+                    </tr>
+                    
             </table>
             <button name="submit" id="btnWOrder">Order</button>
         </form>
