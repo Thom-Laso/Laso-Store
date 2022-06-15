@@ -1,12 +1,12 @@
 <?php
     include("connection.php");
 
-    $Wuser_id = $_SESSION['Wuser_id']; //to get the user id of the one who login 
+    //$Wuser_id = $_SESSION['Wuser_id']; //to get the user id of the one who login 
 
-    if(!isset($Wuser_id))
+ /*   if(!isset($Wuser_id))
         header('location:login_details.php');
     
-        echo $user_id;
+        echo $user_id;*/
 ?>
 
 <!DOCTYPE html>
@@ -17,13 +17,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WholeSeller Form</title>
 </head>
-<body>
+<body style="background-color:#f2ff03;">
     <?php
         if(isset($_POST['submit'])){
             $TxtBxFName=$_POST["txtbxFName"];
             $TxtBxLName=$_POST["txtbxLName"];
             $TxtBxPhNo=$_POST["txtbxPhNo"];
             $TxtBxPassword=$_POST["txtbxPassword"];
+            //$HashPassword=md5($TxtBxPassword);//encrypt password
             $TxtBxShopAdd=$_POST["txtbxShopAdd"];
        
             if($TxtBxFName !="" && $TxtBxLName !="" && $TxtBxPhNo !="" && $TxtBxShopAdd!=""){
@@ -42,19 +43,19 @@
         <form method="POST" action="">
             <table>
                 <tr>
-                    <td> First Name:<input type="Text" name="txtbxFName" placeholder="First Name" required></td>
+                    <td><h3> First Name:<input type="Text" name="txtbxFName" placeholder="First Name" required></h3></td>
                 </tr>
             <tr>
-                <td> Last Name:<input type="Text" name="txtbxLName" placeholder="Last Name" required></td>
+                <td><h3> Last Name:<input type="Text" name="txtbxLName" placeholder="Last Name" required></h3></td>
             </tr>
             <tr>
-                <td>Phone Number:<input type="numeric" name="txtbxPhNo" placeholder="Phone Number"required></td>
+                <td><h3>Phone Number:<input type="numeric" name="txtbxPhNo" placeholder="Phone Number"required></h3></td>
             </tr>
                 <tr>
-                    <td>Shop Address:<input type="Text" name="txtbxShopAdd" placeholder="Address"required></td>
+                    <td><h3>Shop Address:<input type="Text" name="txtbxShopAdd" placeholder="Address"required></h3></td>
                 </tr>
                 <tr>
-                    <td>Password:<input type="password" name="txtbxPassword" placeholder="password"required></td>
+                    <td><h3>Password:<input type="password" name="txtbxPassword" placeholder="password"required></h3></td>
                 </tr>
             </table>
             <input type="submit" name="submit" value="Register" onclick="window.location='WholesellerItems.php'">

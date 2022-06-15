@@ -2,9 +2,9 @@
     require "connection.php";
 ?>
 <?php
-    session_start();
+    /*session_start();
     if (!isset($_SESSION['txtbxUsername']))
-    header('Location: login_details.php');
+    header('Location: login_details.php');*/
 ?>
 <html>
     <head>

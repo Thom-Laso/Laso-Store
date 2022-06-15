@@ -4,8 +4,10 @@
 
 <html>
     <head>
+    <link rel="stylesheet" href="LoginStyle.css">
+
         <body>
-            <h3><center>Login</center></h3><br>
+           <!-- <h3><center>Retailer Login</center></h3><br>
             <form method="post">
                     <center>
                         <table>
@@ -34,7 +36,25 @@
                             </tr>
                         </table>
                     </center>
+                </form> -->
+            <div class="login-form">
+                <form method="post">
+                    <h1>Retailer Login</h1>
+                    <div class="content">
+                    <div class="input-field">
+                        <input type="Numeric" name="txtbxRPhoneNumber" placeholder="Phone Number" autocomplete="nope" required="required">
+                    </div>
+                    <div class="input-field">
+                        <input type="password" name="txtbxRPassword" placeholder="Password" autocomplete="new-password" required="required">
+                    </div>
+                    <a href="#" class="link">Forgot Your Password?</a>
+                    </div>
+                    <div class="action">
+                    <button><a href="RSignUp.php">Register</a></button>
+                    <button name="login">Login</button>
+                    </div>
                 </form>
+            </div>
         </body>
     </head>
 </html>

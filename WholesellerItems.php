@@ -4,22 +4,23 @@
     //require_once('./DB/component.php');
     //require_once('DB/CreateDb.php');
 
-    $user_id = $_SESSION['user_id']; //to get the user id of the one who login from Rlogin_details.php
+    $user_id = $_SESSION['user_id']; //to get the user id of the one who login from login_details.php
 
 if(!isset($user_id))
     header('location:login_details.php');
-    //echo $user_id;
+    echo $user_id;
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WholeSeller Items</title>
 </head>
-    <body>
-
+    <body style="background-color:#f2ff03;">
+   <center> <h1>Whole Seller Items</h1></center>
         <?php 
        
         /*
@@ -38,30 +39,30 @@ if(!isset($user_id))
              </form>
          </center>";*/
             //for($i=1; $i<=6; $i++){
-              
+
                 $sql="select * from itemtb ";
                 $result=$dbcon -> query($sql);
                 $IName="";
                 $IPrice="";
                 $IImage="";
+                
+               
+                    echo "<table border=2><tr><td><b>Item Name</b></td><td><b>Item Price</b></td><td><b>Item Image</b></td><td><b>Quantity</b></td></tr>";
                     if($result->num_rows>0){
                         while($row=$result->fetch_assoc()){
-                            $ItemId=$row["item_id"];
-                            $ItemName=$row["product_name"];
-                            //$IName.=$ItemName;
-                            $ItemPrice=$row["product_price"];
-                            //$IPrice.=$ItemPrice;
-                            //echo "<td>".$row["ItemImage"]."</td>";
-                            $ItemImage="<img src='./".$row['product_image']."'height='70' width='70'>";
-                            //$IImage.=$ItemImage;
-                            //goto outofFor;
-                            
+                            echo "<td>".$row["product_name"]."</td>";
+                           // echo "<td>".$row["item_name"]."</td>";
+                            echo "<td>"."&#8377"."  ".$row["product_Wprice"]."</td>";
+                            //echo "<td>".$row["product_image"]."</td>";
+                            echo "<td><img src='./".$row['product_image']."'height=200px' width='300px'></td>";
+                            echo "<td><input type='numeric' name='ItmQuantity'></td></tr>";
                         }
-                        
+                        echo"</table><br>";
                     }
                     else{
                         echo"No Result </center>";
                     }
+                    
                              // echo $ItemName." - "; 
                              
                              /* echo "
@@ -118,25 +119,6 @@ if(!isset($user_id))
     }
 ?>
     <center>
-        <h1>Items</h1>
-        <form method="POST"action="">
-            <table>
-      
-                    <tr><td><b>Item Name</b></td><td><b>Item Price</b></td><td><b>Item Quantity</b></td></tr>
-                    
-                    
-                    <tr>
-                        <td><?php echo $ItemName;  ?></td><td>&#8377;<?php echo $ItemPrice;?></td><td><input type="number" name="txtbxWItmQnty" size="3" value="1"></td><td><?php echo $ItemImage;?></td><td><input type="checkbox" name="chkbxWItm"></td>
-                    </tr>
-                    
-                    <tr>
-                        <td>Item 1</td><td>&#8377;000</td><td><input type="number" name="txtbxWItmQnty" size="3" value="1"></td><td><img src=uploaded/nmSmartAlmirah_HotStamping.png height="70px"; weight="70px";> </td><td><input type="checkbox" name="chkbxWItm"></td>
-                    </tr>
-                    <tr>
-                        <td>Item 2</td><td>&#8377;000</td><td><input type="number" name="txtbxWItmQnty" size="3" value="1"></td><td><img src=uploaded/nmSmartShoeBox.png height="70px"; weight="70px";></td><td><input type="checkbox" name="chkbxWItm"></td>
-                    </tr>
-                    
-            </table>
             <button name="submit" id="btnWOrder">Order</button>
         </form>
     </center>

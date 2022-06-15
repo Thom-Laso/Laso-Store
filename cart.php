@@ -2,7 +2,14 @@
     session_start();
     require_once('DB/CreateDb.php');
     require_once('DB/component.php');
+    include("connection.php");
+    $user_id = $_SESSION['user_id']; //to get the user id of the one who login from Rlogin_details.php
 
+if(!isset($user_id))
+    header('location:Rlogin_details.php');
+
+    echo $user_id;
+$USER_ID=$user_id;
     $db=new CreateDb(dbname:"lasodb",tablename:"itemtb");
 
     if(isset($_POST['remove'])){
@@ -18,6 +25,16 @@
             }
         }
     }
+
+    /* Below is the portion where we make the order button 
+
+    if(isset($_POST['submit'])){
+        $RUser_Id=$_POST["Retailer_Id"];
+       
+        $Product_Quantity=$_POST["quantityId"];
+       
+    }
+*/
 ?>
 
 
@@ -79,7 +96,7 @@
                     <div class="pt-4">
                         <h6>PRICE DETAILS</h6>
                         <hr>
-                        <div class="row price-details">
+                        <div class="row price-details">1
                             <div class="col-md-6">
                                 <?php 
                                     if(isset($_SESSION['cart'])){
@@ -105,7 +122,7 @@
             </div>
         </div>
         <center>
-            <button name="submit" id="btnROrder">Order</button>
+            <input type="submit" name="submit" id="submit" value="order">
         </center>
     </form>
     <!--To post the button-->
@@ -114,8 +131,28 @@
             //$OrderId=$_POST[$product_id];
             echo "This is in the Post Order";
            // print_r($product_id);
+           $PRODUCT_ID= implode(" ",$product_id);
+           for($i=0;$i<=count($product_id);$i++){
+                  //echo $product_id[$i].",";
+                  $sql= "INSERT into carttb(retailerFK, item_FK, Quantity, ShippingPlace, TotalPrice)VALUES ('$USER_ID','$PRODUCT_ID','3','Mawlai','$total')";
+                   if(mysqli_query($dbcon,$sql)){
+                       echo "Items Uploaded Successfully<br>";
+                   }else
+                       echo "Upload Error<br>";
+           }
         }
-    ?><!---->
+       /* echo ...;
+        echo $product_id;
+        $Product_Id= $product_id + $product_id;
+        echo $Product_Id;
+        echo $Product_Quantity;
+        $Product_TotalPrice=$total;
+        echo $Product_TotalPrice;*/
+
+       // echo count($product_id);
+       
+        
+ ?><!---->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>

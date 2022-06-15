@@ -27,10 +27,10 @@
                     <i class="bi bi-binoculars-fill"></i>
                     </div></button>
     
-                <a href="SignUp.php" id="Idaccount">SignUp</a>
-                <a href="login_details.php" id="Idlogin" >Login</a>
-                <a href="About.html" id="btnUser"span i class="fa fa-fw fa-user" ></i></a></span>
-                <a href="#" id="btnCart" span i class="bi bi-bag-plus-fill"></i></a></span>
+                <a href="RSignUp.php" id="Idaccount">SignUp</a>
+                <a href="Rlogin_details.php" id="Idlogin" >Login</a>
+                <a href="Admin_Panel.php" id="btnUser"span i class="fa fa-fw fa-user" ></i></a></span>
+                <a href="cart.php" id="btnCart" span i class="bi bi-bag-plus-fill"></i></a></span>
                 <a href="logout.php" id="btnLogout" span i class="bi bi-power"></i></span></a>
                 </form> 
             </ul>

@@ -22,10 +22,12 @@
                     echo "<table border=2><tr><td><b>Item Name</b></td><td><b>Item Id</b></td><td><b>Item Image</b></td></tr>";
                     if($result->num_rows>0){
                         while($row=$result->fetch_assoc()){
-                            echo "<td>".$row["ItemName"]."</td>";
-                            echo "<td>".$row["ItemId"]."</td>";
-                            echo "<td>".$row["ItemImage"]."</td>";
-                            echo "<td><img src='uploaded/".$row['ItemImage']."'></td></tr>";
+                            echo "<td>".$row["product_name"]."</td>";
+                           // echo "<td>".$row["item_name"]."</td>";
+                            echo "<td>".$row["item_id"]."</td>";
+                            echo "<td>".$row["product_image"]."</td>";
+                            echo "<td><img src='./".$row['product_image']."'></td></tr>";
+                            
                         }
                         echo"</table><br>";
                     }
@@ -36,7 +38,7 @@
             //Delete Items
                     if(isset($_POST['itmsubmit'])){
                         $ItmId=$_POST["txtbxItem_Id"];
-                        $sqlItm="delete from houseplastics where ItemId=$ItmId";
+                        $sqlItm="delete from itemtb where item_id=$ItmId";
 
                         if(mysqli_query($dbcon,$sqlItm))
                         {

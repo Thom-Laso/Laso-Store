@@ -26,7 +26,7 @@
             $tempname=$_FILES['image']['tmp_name'];
             move_uploaded_file($tempname,$target);
            if($itemName !="" && $itemPrice!="" && $itemDPrice!="" && $itemWPrice!="" && $target!=""){
-                $sql= "INSERT  into itemtb(product_name, product_fprice, product_price, product_Wprice product_image) VALUES ('$itemName','$itemDPrice','$itemPrice','$itemWPrice','$target')";
+                $sql= "INSERT  into itemtb(product_name, product_fprice, product_price, product_Wprice, product_image) VALUES ('$itemName','$itemDPrice','$itemPrice','$itemWPrice','$target')";
                 if(mysqli_query($dbcon,$sql)){
                     echo "Items Uploaded Successfully<br>";
                 }else

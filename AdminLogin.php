@@ -4,9 +4,8 @@
 
 <html>
     <head>
-    <link rel="stylesheet" href="LoginStyle.css">
         <body>
-            <!--<h3><center>Wholeseller Login</center></h3><br>
+            <h3><center>Admin Login</center></h3><br>
             <form method="post">
                     <center>
                         <table>
@@ -35,25 +34,7 @@
                             </tr>
                         </table>
                     </center>
-                </form>-->
-                <div class="login-form">
-                <form method="post">
-                    <h1>Whole Seller Login</h1>
-                    <div class="content">
-                    <div class="input-field">
-                        <input type="Numeric" name="txtbxPhoneNumber" placeholder="Phone Number" autocomplete="nope" required="required">
-                    </div>
-                    <div class="input-field">
-                        <input type="password" name="txtbxPassword" placeholder="Password" autocomplete="new-password" required="required">
-                    </div>
-                    <a href="#" class="link">Forgot Your Password?</a>
-                    </div>
-                    <div class="action">
-                    <button><a href="WholesellerAccInst.php">Register</a></button>
-                    <button name="login">Login</button>
-                    </div>
                 </form>
-            </div>
         </body>
     </head>
 </html>
@@ -66,14 +47,14 @@
         //$HashPassword= md5($password);
         $_SESSION['txtbxPhoneNumber']=$phonenumber;
 
-        $sql="SELECT * from wholesellertb where Phone_Number='$phonenumber' and W_Password='$password'";
+        $sql="SELECT * from admintb where AdminPhoneNumber='$phonenumber' and AdminPassword='$password'";
 
         $result=mysqli_query($dbcon,$sql);
 
         if(mysqli_num_rows($result)>0){
             $row = mysqli_fetch_assoc($result);
-            echo $_SESSION['user_id'] = $row['WholeSeller_Id'];
-            header("Location: WholesellerItems.php");
+            echo $_SESSION['AdUser_id'] = $row['Admin_Id'];
+            header("Location: Admin_Panel.php");
         }
         else{
             echo "Sorry, your credentials are not valid";
@@ -87,4 +68,4 @@
         else
             echo"<br>Sorry, your credentials are not valid";*/
     }
-?>
+?>7
